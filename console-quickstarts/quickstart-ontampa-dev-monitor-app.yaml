@@ -1,25 +1,20 @@
 apiVersion: console.openshift.io/v1
 kind: ConsoleQuickStart
 metadata:
-  name: ontampa-devs-add-healthchecks
+  name: ontampa-devs-monitor-app
 spec:
-  conclusion: Now that we have an application up! Lets configure health checks. 
-    So we can ensure that your application is running correctly, 
-    take the **Monitor your application** quick start.
-  description: You just created a deployment for a node application. 
-    Now, let’s add health checks to it!
-  displayName: Add health checks to your application
+  conclusion: You have learned how to access workload monitoring and metrics!
+  description: |- 
+    Now that we have a deployment and added health checks,
+    let’s monitor your application.
+  displayName: 03 - Monitor your sample application
   durationMinutes: 10
   icon: data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiB2aWV3Qm94PSIwIDAgMDAgNjAgNjAiCiAgICAgdmVyc2lvbj0iMS4xIgogICAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgICAgc3R5bGU9ImNsaXAtcnVsZTpldmVub2RkO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoyIgogICAgIGlkPSJzdmc2IgogICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcwogICAgIGlkPSJkZWZzNiIgLz48cmVjdAogICAgIGlkPSJBcnRib2FyZDMiCiAgICAgeD0iNC41OTM2NDU2IgogICAgIHk9IjIuMDI2NDc0NyIKICAgICB3aWR0aD0iMTEuNzEwNzUiCiAgICAgaGVpZ2h0PSIxMi40NTA1NTEiCiAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2Utd2lkdGg6MSIgLz48cGF0aAogICAgIGQ9Ik0gMzUuNDg0ODQ3LDI2LjE2OTc1NCBIIDE2LjY5OTgzIGMgLTAuNDc4OTcxLDAuMTI2MzczIC0zLjAzOTcyMSwwLjg5MDIxNCAtNC45NTA3MiwzLjE3NjEzNiB2IDYuMjUyNjY2IGwgMC4wMTI2OSwtNi4wOWUtNCAwLjEwNDgxMywwLjkwMDc5OCBjIDAuOTEyODUzLDcuODE1NjI2IDcuMTg5MDM2LDEzLjcxMDU0NSAxNC42MDMzMDQsMTMuNzIwMDkyIDcuNDE0NjYzLC0wLjAwOTYgMTMuNjkxMDQxLC01LjkwNDQ2NiAxNC42MDM2OTYsLTEzLjcyMDA5MiBsIDAuMTA1MDEsLTAuOTAwNzk4IDAuMDEyNSw2LjA5ZS00IHYgLTUuMjAxMDEgYyAtMS45MDkyNDUsLTMuMTExMTg1IC01LjE2MDE0NywtNC4wODM3ODEgLTUuNzA2MjYxLC00LjIyNzc5MiIKICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZS13aWR0aDoxIgogICAgIGlkPSJwYXRoMSIgLz48cGF0aAogICAgIGQ9Im0gNTAuNDQ1MzM0LDIyLjUwNjU5NCBjIDEuMDMyNDk1LC0xLjA5NzkzMSAxLjU4MzI5MSwtMi42MDg1OTggMS41ODczOTIsLTQuMzE2Mzk4IC0xLjYwNjcxNywwLjAwNDQgLTMuMDI3NjE5LDAuNTg5OTQ5IC00LjA2MDExOCwxLjY4Nzg3OSAtMC44MDE3OTgsMC44NTI0NDggLTEuMzA5MDY3LDEuOTU1NTY3IC0xLjQ5OTM2OCwzLjIwNDc3MiAwLjAwNzYsMC4wNjkxIDAuMDE4OTEsMC4xMzcxNjQgMC4wMjU5NSwwLjIwNjY4IDAuMDMwODUsMC4zMDc5NDMgMC4wMDQ3LDAuNjExNzM3IC0wLjA2OTY4LDAuOTAyNDU3IDEuNTg4MTcxLC0wLjAxNDczIDIuOTkyNDg2LC0wLjU5NzYyNyA0LjAxNTgxMywtMS42ODUzOSIKICAgICBzdHlsZT0iZmlsbDojZDcwMTAwO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZS13aWR0aDoxIgogICAgIGlkPSJwYXRoMiIgLz48cGF0aAogICAgIGQ9Im0gNDUuMTE4NTAyLDI2LjE3NjgwOSBjIDAuMDA0MywxLjcwNzU5MyAwLjU1NTA4OSwzLjIxODI2IDEuNTg3NTg4LDQuMzE2MTkxIDEuMDMyNDk5LDEuMDk3OTMxIDIuNDUzNCwxLjY4MzMxNSA0LjA1OTcyOCwxLjY4NzQ2NSAtMC4wMDQzLC0xLjcwNzU5MyAtMC41NTQ4OTgsLTMuMjE4MjYgLTEuNTg3MzkyLC00LjMxNjE5MSAtMS4wMzI2OTQsLTEuMDk3OTMxIC0yLjQ1MzYwMSwtMS42ODMzMTUgLTQuMDU5OTI0LC0xLjY4NzQ2NSIKICAgICBzdHlsZT0iZmlsbDojZDcwMTAwO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZS13aWR0aDoxIgogICAgIGlkPSJwYXRoMyIgLz48cGF0aAogICAgIGQ9Im0gMjYuNDg3ODY4LDcuNzg2MzA2NyBjIC05LjQ1MzY5NSwwIC0xNy4yNjE4MzU4LDYuNzU1MjU1MyAtMTguMTYzOTUzOCwxNS43MTM0MjYzIC0wLjAxNzk2LDAuMTgwNzQxIDAuMDY0OCwwLjMyMTIyNCAwLjEzNzQwMywwLjQwNzEzMyAwLjE1MjA0NiwwLjE3OTcwMyAwLjM5NjIxNiwwLjI4NzE5MyAwLjY1MzQ2MywwLjI4NzE5MyBIIDQzLjg2MDk2MiBjIDAuMjU2ODU3LDAgMC41MDEwMjQsLTAuMTA3MjgyIDAuNjUzMDcsLTAuMjg3MTkzIDAuMDA2NywtMC4wMDc5IDAuMDEzMDcsLTAuMDE4MjYgMC4wMTk3MywtMC4wMjY3NyAwLjAwOSwtMC4yNzc4NTUgMC4wMzAyMiwtMC41NTEzNTIgMC4wNjIyNiwtMC44MjA2OTkgQyA0My40ODY4MTMsMTQuMzIyMDE1IDM1Ljc4NTQzNiw3Ljc4NjMwNTcgMjYuNDg3ODc4LDcuNzg2MzA1NyIKICAgICBzdHlsZT0iZmlsbDojZDcwMTAwO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZS13aWR0aDoxIgogICAgIGlkPSJwYXRoNCIgLz48cGF0aAogICAgIGQ9Im0gMTcuMDA4MjEyLDMwLjQ5ODE4OCAyLjUxODc4NywzLjQ5MDA5NyAtMi41MTg3ODcsMy40ODk4ODkgaCAyLjQwODkgbCAyLjUxODc4NywtMy40ODk4ODkgLTIuNTE4Nzg3LC0zLjQ5MDA5NyB6IgogICAgIHN0eWxlPSJmaWxsLXJ1bGU6bm9uemVybztzdHJva2Utd2lkdGg6MSIKICAgICBpZD0icGF0aDUiIC8+PHBhdGgKICAgICBkPSJtIDQ2Ljc1NzgxMSwzMC40Mzc1OTUgYyAtMS4wMDQ1ODYsLTEuMDY4MjU3IC0xLjU0NTIzNCwtMi41MTMxNDQgLTEuNTY1NTMsLTQuMTgyMTQgMS41NzA2MDYsMC4wMjEzNyAyLjkyOTgzNCwwLjU5NTk2NiAzLjkzNDAyOSwxLjY2NDAxNiAxLjAwNDU5LDEuMDY4MjU3IDEuNTQ1MjM0LDIuNTEzMzUxIDEuNTY1MzM5LDQuMTgyNzYzIC0xLjU3MDQxNSwtMC4wMjExNyAtMi45Mjk0NDQsLTAuNTk1NzU5IC0zLjkzMzgzOCwtMS42NjQ2MzkgbSAtMi4yOTYyOCwtNi41ODIxOTEgLTAuMDAxOCwtNi4wOWUtNCBjIC0wLjEzODAzOSwwLjE2MzEwMyAtMC4zNjE5MTEsMC4yNjEyNTQgLTAuNTk4NjYzLDAuMjYxMjU0IEggOS4xMTUwMjcyIGMgLTAuMjM2OTQ3LDAgLTAuNDYxMDE0LC0wLjA5ODE1IC0wLjU5OTE5OSwtMC4yNjEyNTQgLTAuMDYyNjUsLTAuMDc0MjkgLTAuMTMzODk1LC0wLjE5NDY0MyAgICAgLTAuMTE4ODY2LC0wLjM0NjMzMyAwLjg5ODIxNSwtOC45MTg3NDQgOC42NzUxMjQ4LC0xNS42NDQzMjUzIDE4LjA5MDc2MzgsLTE1LjY0NDMyNTMgNC40NzUwNjYsMCA4Ljc2NDkxMywxLjU0MjQxNiAxMi4wNzkyNDcsNC4zNDMxNjgzIDMuMzAzOTk4LDIuNzkxODI5IDUuNDE4NTY4LDYuNjQ1NDgxIDUuOTU1MzEsMTAuODUyNzMgLTAuMDMxNDEsMC4yNjgzMSAtMC4wNTE5MiwwLjUzNjIwNCAtMC4wNjA3LDAuNzk1MzgzIG0gLTExLjQyNTAxMSw1Ljc5MjIwNCBjIC0xLjExNzIwNiwwIC0yLjEyODgyLDAuMjkzNDE3IC0yLjg2Nzk2NSwwLjg3ODU5NCAtMy4xNjM4NTMsLTAuNjYzMiAtNi4xMDQ2MTYsLTIuMTM3MzQ1IC04LjYwOTM0OSwtNC4yNzkyNTUgbCAxMy45MDc4NzcsLTAuMDAxOSBjIDAuNTYyODk4LDAuMTQ4OTkxIDMuMjU1MiwwLjk3NTI5MyA1LjE1MDU4NSwzLjQ1NzEwMyAgICAgLTEuNDMxMDU1LDAuNTQ1NTQxIC0yLjkwNjk5NSwwLjkwOTkyOCAtNC40MTQ3NTcsMS4wODk2MyAtMC43NTE4MzEsLTAuNzYzMjE4IC0xLjg5MDg5NCwtMS4xNDQyMDUgLTMuMTY2MzkxLC0xLjE0NDIwNSBtIDcuOTY0NDgsNi44NDEzNyBjIC0wLjkwNzc3OCw3Ljc3MzUwMSAtNy4xNTQ2ODQsMTMuNjQyMDcgLTE0LjUzMDg5NSwxMy42NTIwMjkgLTcuMzc1ODE3LC0wLjAxIC0xMy42MjI3MjMsLTUuODc4NTI4IC0xNC41MzA4OSwtMTMuNjUyMDI5IGwgLTAuMTA1MDEsLTAuOTAwNzk3IC0wLjAxMTg4LC0wLjA0MDY3IHYgLTYuMTcxOTYgYyAxLjg5MDY5OSwtMi4yNDczMjQgNC40MDgzMTYsLTMuMDAxNDEzIDQuODc3MzI5LC0zLjEyNzk5MyBsIDIuMTI2MjgzLC0yLjA4ZS00IGMgMi44NTAzOTcsMi45NzU0NzQgNi4zNzEyMzEsNS4wNjczNzQgMTAuMjI4OTQ3LDYuMDM0OTkgICAgIC0wLjA3MzM5LDAuMjk5MDIxIC0wLjExNjUxOCwwLjYyMDI0NSAtMC4xMTY1MTgsMC45NzA1MiAwLDIuNDA2Mjc3IDEuODM0ODc3LDQuMzU2ODYzIDQuMDk4MTc1LDQuMzU2ODYzIDIuMjYzMjk5LDAgNC4wOTc5ODIsLTEuOTUwNTg2IDQuMDk3OTgyLC00LjM1Njg2MyAwLC0wLjIxMTAzNyAtMC4wMTg3MywtMC40MDkyMDggLTAuMDQ2MDUsLTAuNjAxNzc3IDEuMzcxOTE0LC0wLjIxMjA3NCAyLjcxNzY3MywtMC41Njg3ODIgNC4wMjk0NzIsLTEuMDYzMDY5IHYgMy45Mjg5NzkgeiBNIDQ2LjU3MjA1LDIzLjI4MTQxNSBjIC0wLjAwNDMsLTAuMDQwMDUgLTAuMDA5NCwtMC4wNzkwNiAtMC4wMTQ0NSwtMC4xMTg2OTYgLTAuMDAzMywtMC4wMjYxNCAtMC4wMDczLC0wLjA1MjI5IC0wLjAxMDE2LC0wLjA3NzgyIDAuMTkwMzAyLC0xLjIzNzM3NyAwLjcwMTA4MywtMi4zMjcwMDcgICAgIDEuNDc3MTE1LC0zLjE1MTY0OSAxLjAwNDc4NSwtMS4wNjgyNTcgMi4zNjM2MTksLTEuNjQyODUgMy45MzQwMzQsLTEuNjY0NDMxIC0wLjAyMDEsMS42NjkyMDMgLTAuNTYwNzQ5LDMuMTE0Mjk4IC0xLjU2NTE0NSw0LjE4MjM0NyAtMC45ODkxNjYsMS4wNTE4NjUgLTIuMzI1NzUyLDEuNjI1MjEyIC0zLjg2OTYyMSwxLjY2MTExMSAwLjA1OTU0LC0wLjI3NTc3OSAwLjA3NTczLC0wLjU1NTA4NyAwLjA0ODIxLC0wLjgzMDg2NiBtIDMuMDEzOTU5LDIuMjc4ODY1IGMgMC44NDA4MjksLTAuMzg3MDA0IDEuNTg4NzU3LC0wLjkyNTY5OCAyLjIyNDg0MywtMS42MDEzNDggMS42MTgyMzQsLTEuNzIwNjY2IDIuMzY0NTk5LC00LjE0MjA5MSAyLjEwMjA4MSwtNi44MTg3NTIgbCAtMC4wODM5MywtMC44NTk3MSAtMC44MDkwMTYsLTAuMDg5NjQgYyAtMi41MTU0NywtMC4yODAzNDUgLTQuNzk0MzgyLDAuNTE0ICAgICAtNi40MTMxOTYsMi4yMzUyODkgLTAuMjk1Njk3LDAuMzEzOTYxIC0wLjU2OTkyMiwwLjY2NDQ0NCAtMC44MTY4MjYsMS4wNDMzNTYgQyA0NC41NDcyMzksMTUuNTE0MTM4IDQyLjA4MTM0NywxMi4xMTM4OTMgMzguNjUxMjcsOS42MjcxMDI3IDM1LjEzNzI2MSw3LjA3OTcxOTIgMzAuOTMxMzQ2LDUuNzMyOTg1MiAyNi40ODc3MDEsNS43MzI5ODUyIGMgLTYuMTE4ODY2LDAgLTExLjYxNjg3LDIuNTkwMTI5NSAtMTUuMzIzMzE5LDYuNzQ3MzY4OCAtMi42MTkxMTE4LDIuOTM3OTE1IC00LjM0MzcxMDgsNi42NTgzNDcgLTQuNzYwNjE2OCwxMC44MDA0MzggLTAuMDczNTksMC43MjgxNSAwLjE0Njk3LDEuNDM3NjI0IDAuNjIxMDYzLDEuOTk4OTM2IDAuMzQwMzksMC40MDIzNiAwLjc4ODUyMywwLjY5NDUzMyAxLjI5ODkxNCwwLjg0Nzg4MyB2IDEuOTg5ODA1IGMgLTAuNzUyMjE5LDAuNDgyMDQ0ICAgICAtMS4zNjkxODEsMS4xNzQ3MSAtMS43ODQzMjQsMi4wMDM3MDkgLTAuMDM3ODgsMC4wNzE4IC0wLjA3Mzk4LDAuMTQ2MDg2IC0wLjExNTc0MywwLjIzODYzNSAtMC4xNjc4NTQsMC4zNjU4MzkgLTAuMjkwNDI2LDAuNzY5MjM3IC0wLjM2NDU5NiwxLjE5OTYxMSAtMC4wMDc2LDAuMDQxMyAtMC4wMTQ0NSwwLjA4MjE3IC0wLjAyMTI5LDAuMTI0NzEzIC0wLjAxNTIsMC4xMDI5MjQgLTAuMDI5NDcsMC4yMDUyMjcgLTAuMDM5MiwwLjMxMTY3OSAtMC4wMTk1MywwLjE5Nzc1NiAtMC4wMjkwOSwwLjM3NDM0NiAtMC4wMjkwOSwwLjUzOTkzOSAwLDAuMTgxMzYzIDAuMDA5NywwLjM2NTIxNiAwLjAzMDI4LDAuNTYyMzUgMC4wMTQ4MywwLjE1NjQ2MSAwLjAzOTgzLDAuMzAzNzkzIDAuMDYxNjgsMC40MjkxMjggbCAwLjAwMzQsMC4wMjAxMyBjIDAuMDAyNCwwLjAxNDUzIDAuMDA0MywwLjAyODY0ICAgICAwLjAwNjgsMC4wNDA4OCAwLjA5MTczLDAuNDg2ODE3IDAuMjQ0NTU4LDAuOTM3MzE5IDAuNDUzOTg1LDEuMzM4NDM0IDAuNzEzOTY0LDEuNDQzNjQxIDIuMDM3NDc1LDIuNDQ5MjMxIDMuNTQ3MzgzOCwyLjY5ODY1NyAxLjM5MTQzLDguNDU4MDc0IDguMjUxOTc4LDE0LjYwODg1NCAxNi4zNDA5ODQsMTQuNjQ2NDE0IGwgMC4wNzM1OCw0LjM0ZS00IDAuMDczMTksLTQuMzRlLTQgdiAtNC4zNWUtNCBjIDguMDc0NDA2LC0wLjA1NDU1IDE0LjkxNjk5NCwtNi4xOTkzMDkgMTYuMzA2NDc1LC0xNC42NDU3NiAxLjUxMDEwNSwtMC4yNDk0MjYgMi44MzMwMjYsLTEuMjU1MDE1IDMuNTQ2MDE2LC0yLjY5NzQxMiAwLjIxMDc5NiwtMC40MDI5ODIgMC4zNjQwMSwtMC44NTM0ODUgMC40NTQ5NjIsLTEuMzM4MDE5IGwgMC4wMTA5NywtMC4wNjMyOSBjIDAuMDE3NCwtMC4wOTk4MSAwLjAzNTMyLC0wLjIwNTAxOSAgICAgMC4wNDk1NywtMC4zMTg5NDIgMS4xNTA1ODUsMC42ODE2NjggMi40NDQyMzIsMS4wMjY3NTUgMy44NDYyMDQsMS4wMjY3NTUgMC4zMjM4MDIsMCAwLjY1MzA2OCwtMC4wMTgyNiAwLjk3ODIzNSwtMC4wNTQ1NyBsIDAuODA4NjI3LC0wLjA4OTQ0IDAuMDg0MTMsLTAuODYwMTI1IGMgMC4yNjI1MTgsLTIuNjc2MjQ2IC0wLjQ4NDA0MSwtNS4wOTc2NzEgLTIuMTAyMjc1LC02LjgxNzcxNCAtMC4yODk2NDIsLTAuMzA4NTY3IC0wLjYxMTMsLTAuNTk0NzIyIC0wLjk1Nzc0MSwtMC44NTIyNDEiCiAgICAgc3R5bGU9ImZpbGwtcnVsZTpub256ZXJvO3N0cm9rZS13aWR0aDoxIgogICAgIGlkPSJwYXRoNiIgLz4KPC9zdmc+Cg==
   introduction: |-
-    ### This quick start shows you how to add health checks to your an application.
-    You should have previously created the **Lets get started with Node** application 
-    quick start.
-  nextQuickStart:
-  - monitor-app
+    ### This quick start shows you how to monitor the deployed application.
+    You should have a deployment setup, if not refer to the **01 - Getting started with a Deployment** quick start. 
   prerequisites:
-  - You completed the "Lets get started with Node" 
-    quick start.
+  - You completed the "01 - Getting started with a Deployment" quick start.
   tasks:
   - description: |-
       To view the details of your application:
@@ -32,46 +27,50 @@ spec:
 
       1. Click on the deployment to view its details.
 
-      A side panel is displayed containing the details of your application.
+      1. Click on the **Observe** tab in the side panel.
+
+      You can see context sensitive metrics and alerts in the **Observe** tab.
     review:
       failedTaskHelp: This task isn’t verified yet. Try the task again.
       instructions: |-
-        #### To verify you are viewing the details of your application:
-        Is the side panel titled with the application name?
+        #### To verify you can view the monitoring information:
+        1. Do you see a **Metrics** accordion in the side panel?
+        2. Do you see a **View dashboard** link in the **Metrics** accordion?
+        3. Do you see three charts in the **Metrics** accordion: **CPU usage**, **Memory usage** and **Receive bandwidth**?
     summary:
       failed: Try the steps again.
-      success: You have viewed the details of your application!
-    title: View the details of your application
+      success: You have learned how you can monitor your app!
+    title: View the monitoring details of your sample application
   - description: |-
-      ### To verify that there your application has no health checks configured:
-      1. View the information in the **Resources** tab in the side panel.
+      ### To view the project metrics in the dashboard:
+      1. Click on the **View dashboard** link in the side panel.
+      2. You can change the **Time Range** and **Refresh Interval** of the dashboard.
+      3. Click on the **Dashboard** drop-down list to view a list of available dashboards.
     review:
       failedTaskHelp: This task isn’t verified yet. Try the task again.
       instructions: |-
-        #### To verify there are no health checks configured:
-        Do you see an inline alert stating that your application does not have health checks?
+        #### To verify that you are able to view the project metrics in the dashboard:
+        Do you see metrics charts in the dashboard?
     summary:
       failed: Try the steps again.
-      success: You have verified that there are no existing health checks!
-    title: Verify that there are no health checks
-  - description: "### To add health checks to your app:\n1. Add health checks to
-      your deployment in one of the following ways: \n\n  a. On the
-      side panel, click on the **Actions** menu, where you will see an **Add Health
-      Checks** menu item or \n  \n  b. Click on the **Add Health Checks** link on
-      the inline notification in the side panel.\n\n2. In the Add Health Checks form,
-      click on the **Add Readiness Probe** link.  Leave the default values, and click
-      on the check to add the Readiness Probe.\n3. Click on the **Add Liveness Probe**
-      link.  Leave the default values, and click on the check to add the Liveness
-      Probe.\n4. Click on the **Add Startup Probe** link.  Leave the default values,
-      and click on the check to add the Startup Probe.\n5. Click **Add** when you’re
-      done.\n\nYou will be brought back to the Topology View."
+      success: You have learned how to view the dashboard in the context of your app!
+    title: View project metrics in the dashboard
+  - description: |-
+      ### To view custom metrics:
+      1. Click on the **Metrics** tab of the **Observe** page.
+      2. Click the **Select Query** drop-down list to see the available queries.
+      3. Click on **Filesystem Usage** from the list to run the query.
+
+      #### Note: select **Custom Query** from the dropdown to create and run a custom query utilizing PromQL.
+      
+      Refer to [PromQL: Query Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/) for more information.
     review:
-      failedTaskHelp: This task isn’t verified yet. Try the task again, or [read more](https://docs.okd.io/4.18/applications/application-health.html)
-        about this topic.
-      instructions: |-
-        #### Verify that health checks are now configured:
-        Is the inline notification gone?
+      failedTaskHelp: This task isn’t verified yet. Try the task again.
+      instructions: |
+        #### Verify you can see the chart associated with the query:
+
+        - Do you see a chart displayed with filesystem usage for your project?
     summary:
       failed: Try the steps again.
-      success: You have added health checks to your app!
-    title: Add health checks to your application
+      success: You have learned how to run a query!
+    title: View custom metrics
