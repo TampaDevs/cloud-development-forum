@@ -14,18 +14,20 @@ spec:
     workload, usually one that doesn't maintain state.
     It provides the declarative updates for **Pods** and **ReplicaSets**.
     
-    For this Quick start we will use a **Node.js** application for our deployment.
+    For this Quick start we will use a **Node.js** application\n
+    for our deployment.
   nextQuickStart:
   - ontampa-devs-add-healthchecks
   tasks:
-  - description: "To deploy a Node application:\n1. Click on the [Perspective switcher]{{highlight
-      qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1. In the 
-      navigation menu, click [+Add]{{highlight qs-nav-add}}.\n1. Click the [Project]{{highlight qs-nav-project}}
-      dropdown menu and select **Create Project** to create a project for your Node  application.\n1. 
-      In the **Name** field, enter a name for your new project. Then click **Create**.\n1. On 
-      the [+Add]{{highlight qs-nav-add}}, click **Import from Git** on the **Git Repository** tile. \n1. 
-      In the **Git Repo URL** field, add \n\n  ```\n \ https://github.com/nodeshift-starters/nodejs-rest-http\n  ``` \n\n1. 
-      At the end of the form, click **Create**. "
+  - description: "To deploy a Node application:\n1. Click on the [perspective switcher]{{highlight
+      qs-perspective-switcher}} at the top of the navigation, and select **Developer**.\n1.
+      In the navigation menu, click [Add]{{highlight qs-nav-add}}.\n1. Click the **Project**
+      dropdown menu and select **Create Project** to create a project for your Node
+      application.\n1. In the **Name** field, enter a name for your new project. Then
+      click **Create**.\n1. On the **+Add page**, click **Import from Git** on the
+      **Git Repository** tile. \n1. In the **Git Repo URL** field, add \n\n  ```\n
+      \   https://github.com/nodeshift-starters/nodejs-rest-http\n  ``` \n\n1. At
+      the end of the form, click **Create**. "
     review:
       failedTaskHelp: This task isn’t verified yet. Try the task again.
       instructions: |-
