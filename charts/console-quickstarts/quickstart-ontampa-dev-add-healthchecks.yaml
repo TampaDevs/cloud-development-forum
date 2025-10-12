@@ -17,7 +17,7 @@ spec:
     You should have previously created the **01 - Getting started with a Deployment** 
     quick start.
   nextQuickStart:
-  - monitor-app
+  - ontampa-devs-monitor-app
   prerequisites:
   - You completed the "01 - Getting started with a Deployment" quick start.
   tasks:
