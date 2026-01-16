@@ -1,14 +1,19 @@
 ---
 name: Tampa Devs Cloud user addition
 about: Adding user to the Tampa Devs Cloud
-title: "[User add]"
+title: "Tampa Devs Cloud request for: "
 labels: Cloud Access
 assignees: ''
 
 ---
 
-In order to provide access to the Tampa Devs Cloud Please provide:
-
+Name: 
 Github Handle:
+Refferred by:
 
-Once added please see [the wiki](https://github.com/TampaDevs/cloud-development-forum/wiki) for further instructions.
+Welcome to the Tampa Devs Cloud!
+
+When time permits please reference items below: 
+
+[Getting started](https://github.com/TampaDevs/cloud-development-forum/wiki)
+[Slack #tampadevscloud](https://tampa-devs.slack.com/archives/C04FHHCT9K8)
