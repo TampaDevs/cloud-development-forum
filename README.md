@@ -1,5 +1,8 @@
 ### Welcome to Tampa Devs Cloud forum repo!
 
+**Repo is deprecated and placed in read only***
+**No longer being maintained***
+
 This repo is where users get added to the Tampa Devs Cloud and have discussions on how to do 
 stuff on the Tampa Devs Cloud.
 
